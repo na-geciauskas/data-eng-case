@@ -21,8 +21,8 @@ breweries_df = raw_brew_data_df.select(
 
 # Partition data by brewery location
 breweries_df.write.partitionBy(
-    "longitude", "latitude", "id"
-).parquet("breweries_exact_location_parquet", mode="overwrite")
+    "country", "id"
+).parquet("breweries_location_parquet", mode="overwrite")
 
 # Stop SparkSession
 spark.stop()
