@@ -13,10 +13,12 @@
    - Developed another Python script to transform the raw data into a columnar storage format.
    - Chose Parquet as the storage format and partitioned it by brewery location - state_province and country, to avoid data duplication.
 
-4. **Gold Layer/Aggregated View**: 
-   - Planned to create an aggregated view showing the quantity of breweries per type and location.
-   - Objective: Create a dataset or view in BigQuery on Google Cloud Platform.
-   - Use SQL to aggregate brewery data by type and location.
+4. **Gold Layer**: 
+   - Developed an SQL Query in Google BigQuery to create an aggregated view swith the quantity of breweries per type and location.
+   - Location aggregation perfomed at country level.
+   - Secondary aggregation created in same manner, at country and state level.
+   - Using more information in aggragtion function would compromise performance and usability of the function itself.
+
 
 5. **Tooling**: 
    - Utilized Python and PySpark for the bronze and silver layer operations/transformation, and SQL for the gold Layer transformation.
@@ -29,7 +31,7 @@
 
 7. **Google Cloud Platform (GCP)**: 
    - Leveraged GCP for creating a bucket in the data lake to store raw, transformed, and aggregated data.
-   - Intended use of BigQuery with SQL for creating the aggregated view with the quantity of breweries per type and location.
+   - Use of BigQuery with SQL for creating the aggregated view with the quantity of breweries per type and location.
    - Planned to use Python scripts within Airflow to orchestrate the pipeline and manage data movement between buckets.
 
 8. **Bucket Setup**: 
