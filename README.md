@@ -11,7 +11,7 @@
 
 3. **Silver Layer**: 
    - Developed another Python script to transform the raw data into a columnar storage format.
-   - Chose Parquet as the storage format and partitioned it by brewery location, country, and ID to avoid data duplication.
+   - Chose Parquet as the storage format and partitioned it by brewery location - state_province and country, to avoid data duplication.
 
 4. **Gold Layer/Aggregated View**: 
    - Planned to create an aggregated view showing the quantity of breweries per type and location.
